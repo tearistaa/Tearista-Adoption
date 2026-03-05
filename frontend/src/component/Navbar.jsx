@@ -1,41 +1,29 @@
-import { useEffect, useState } from 'react';
-
-//Import CSS
+// Import CSS
 import '../styles/Navbar.css';
 
+// Import Icons
+import { FaCog, FaEnvelope, FaHeart, FaPaw, FaThLarge } from 'react-icons/fa';
+
 function Navbar() {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 80);
-            if (window.scrollY > 80) setIsExpanded(false);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
-        <div className={`sneaky-nav ${isScrolled ? 'scrolled' : ''} ${isExpanded ? 'expanded' : ''}`}>
-            <NavItem icon='fas fa-th-large' label='Home' isScrolled={isScrolled}/>
-            <NavItem icon='fas fa-paw' label='Pet Gallery' isScrolled={isScrolled}/>
-            <NavItem icon='fas fa-heart' label='Favorites' isScrolled={isScrolled}/>
-            <NavItem icon='fas fa-envelope' label='About Us' isScrolled={isScrolled}/>
+        <div className='sneaky-nav'>
+            <NavItem icon={<FaThLarge />} label='Home' />
+            <NavItem icon={<FaPaw />} label='Pet Gallery' />
+            <NavItem icon={<FaHeart />} label='Favorites' />
+            <NavItem icon={<FaEnvelope />} label='About Us' />
 
             <div className='divider'></div>
             
-            <NavItem icon='fas fa-cog' label='Settings' isScrolled={isScrolled}/>
-
+            <NavItem icon={<FaCog />} label='Settings' />
         </div>
     )
 }
 
-function NavItem({ icon, label, isScrolled }) {
+function NavItem({ icon, label }) {
   return (
     <div className='nav-item'>
       <div className='icon-wrapper'>
-        <i className={`${icon} nav-icon ${isScrolled ? 'spin-on-hover' : ''}`}></i>
+        <span className='nav-icon'>{icon}</span>
       </div>
       <span className='nav-label'>{label}</span>
     </div>
