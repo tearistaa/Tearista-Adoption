@@ -1,0 +1,156 @@
+.footer {
+    background-color: var(--secondary-color);
+    padding: 60px 5% 20px;
+    margin-top: 80px;
+    color: var(--text-dark);
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1.2fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: -10px;
+}
+
+.footer-brand p {
+    color: var(--text-light);
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-newsletter h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-newsletter p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-links ul li a::after {
+    content: '→';
+    margin-left: 8px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3 ease-in-out;
+    color: var(--primary-color);
+}
+
+.footer-links ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.footer-links ul li a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons svg {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons svg:hover {
+    transform: translateY(-5px);
+    color: var(--accent-color);
+}
+
+.subscribe-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.subscribe-form input {
+    padding: 12px 20px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    flex: 1;
+}
+
+.subscribe-form input::placeholder {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
+.subscribe-form input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(255, 149, 66, 0.2);
+    background: var(--white);
+}
+
+.subscribe-form input:focus::placeholder {
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+.btn-subscribe {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-subscribe:hover {
+    background-color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+    color: var(--text-light);
+}

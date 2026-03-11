@@ -75,6 +75,7 @@
 .category-section {
     padding: 60px 0;
     text-align: center;
+    color: var(--text-light);
 }
 
 .section-title h2 {
